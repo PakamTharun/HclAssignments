@@ -1,0 +1,65 @@
+package com.pack.Springbootmvc;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
+import org.springframework.context.annotation.PropertySources;
+
+@Configuration
+@ConfigurationProperties(prefix="student")
+@PropertySources({
+	@PropertySource("classpath:student.properties"),
+	@PropertySource("file:\\C:\\handson\\student1.properties")
+})
+public class StudentProps {
+
+	private String name;
+	private String age;
+	private String location;
+	private String email;
+	private String course;
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getCourse() {
+		return course;
+	}
+	public void setCourse(String course) {
+		this.course = course;
+	}
+	public StudentProps(String name, String age, String location, String email, String course) {
+		super();
+		this.name = name;
+		this.age = age;
+		this.location = location;
+		this.email = email;
+		this.course = course;
+	}
+	public StudentProps() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	
+	
+}

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="C:\Users\THARUN\Downloads\SpringHibernate"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\eclipse-workspace\Spring1\src\main\resources\spring1\Main.java"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\eclipse-workspace\Spring1\src\main\java\sample.xml"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="package">
+		</list>
+		<list key="groupId">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="com.pack"/>
+		</list>
+		<list key="name">
+			<item value="spring"/>
+		</list>
+		<list key="artifactId">
+			<item value="PetPeers"/>
+			<item value="SpringHibernate1"/>
+			<item value="springhibernate"/>
+			<item value="SpringHibernate"/>
+			<item value="Employee"/>
+			<item value="Student1"/>
+			<item value="Student"/>
+			<item value="SpringMVC1"/>
+			<item value="SpringMVC"/>
+			<item value="spring"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Testing\SpringbootJunit"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\Spring-Boot1"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\SpringBootSecurityPetPeerShop"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\SpringBootRoleBasedSecurity"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\SpringBootSecurity1"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\Springboot6"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\SpringBootSecurity"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\PetPeershop1"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\PetPeershop1"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\PetPeerShop"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\CaseStudy\PetPeer"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\PetPeer"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\PetPeers"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\Pets"/>
+			<item value="C:\Users\THARUN\Desktop\windows-ssd\Users\THARUN\Spring\PetPeers1"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,46 @@
+package com.pack.Springboot1;
+
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Configuration;
+
+import com.pack.Springboot1.entity.Customer;
+import com.pack.Springboot1.entity.Product;
+import com.pack.Springboot1.repo.CustomerRepository;
+import com.pack.Springboot1.repo.ProductRepository;
+
+@Configuration
+@SpringBootApplication
+public class Springboot1Application implements CommandLineRunner {
+	@Autowired
+	ProductRepository prodrepo;
+	@Autowired
+	CustomerRepository custrepo;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Springboot1Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		insertProduct();
+}
+
+	private void insertProduct() {
+		List<Product> p=new List<>();
+		Product p1=new Product(1L,"soap","soaps",12.00);
+		p.add(p1);
+		prodrepo.saveAll(p);
+		Customer c1=new Customer();
+		List<Customer> c=new List<>(12L,"Tharun",23);
+		c.add(c1);
+		custrepo.saveAll(c);
+		}
+		
+	}

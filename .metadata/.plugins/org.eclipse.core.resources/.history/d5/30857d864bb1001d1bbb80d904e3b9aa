@@ -1,0 +1,127 @@
+package com.pack.Controller;
+import java.util.Random;
+@Controller
+public class EmployeeController {
+
+
+	             
+
+	              @Autowired
+
+	              EmployeeService employeeService;
+
+	             
+
+	              @RequestMapping("/redirect")
+
+	              public String loadEmployeeForm(ModelMap map) {
+
+	                             map.addAttribute("empForm", new Employee());
+
+	                             return "EmployeeRegister"; //viewname
+
+	              }
+
+	             
+
+	              @RequestMapping(value="/saveEmp",method=RequestMethod.POST)
+
+	              public String saveEmployee(@Validated @ModelAttribute("empForm") Employee employee, BindingResult result, ModelMap map) {
+
+	                             String resultPage="";
+
+	                             if(result.hasErrors()) {
+
+	                                           resultPage="EmployeeRegister";
+
+	                             }
+
+	                             else {
+
+	                                           Random r = new Random();
+
+	                                           int empid = r.nextInt(500000);
+
+	                                           employee.setId(empid);
+
+	                                           employeeService.saveEmployee(employee);
+
+	                                           resultPage="redirect:/fetchAllEmp";
+
+	                             }
+
+	                             return resultPage;
+
+	              }
+
+	             
+
+	              @RequestMapping("/fetchById/{eid}") //Path variable
+
+	              public String getEmployeeById(@PathVariable("eid")Integer empId,ModelMap m) {
+
+	                             Employee e=employeeService.fetchEmployeeById(empId);
+
+	                             m.addAttribute("editForm",e);
+
+	                             return "EmployeeUpdate";
+
+	              }
+
+	             
+
+	              @RequestMapping(value="/editEmp",method=RequestMethod.POST)
+
+	              public String editEmployee(@Validated @ModelAttribute("editForm")Employee emp, BindingResult result, ModelMap map) {
+
+	                             String resultPage="";
+
+	                             if(result.hasErrors()) {
+
+	                                           resultPage="EmployeeUpdate";
+
+	                             }
+
+	                             else {
+
+	                                           employeeService.updateEmployee(emp);
+
+	                                           resultPage="redirect:/fetchAllEmp";
+
+	                             }
+
+	                             return resultPage;
+
+	              }
+
+	             
+
+	              @RequestMapping("delete/{id}")
+
+	              public String deleteEmployee(@PathVariable("id")Integer eid, ModelMap map) {
+
+	                             employeeService.deleteEmployee(eid);              
+
+	                              return "redirect:/fetchAllEmp";
+
+	              }
+
+	             
+
+	              @RequestMapping("/fetchAllEmp")
+
+	              public String fetchAllEmployee(ModelMap map) {
+
+	                             List<Employee> list=employeeService.fetchAllEmployee();
+
+	                             map.addAttribute("empList",list);
+
+	                             return "EmployeeSuccess";
+
+	              }
+
+	 
+
+	}
+
+

@@ -1,0 +1,66 @@
+package com.pack.Springboot1;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.pack.Springboot1.entity.Customer;
+import com.pack.Springboot1.entity.Product;
+import com.pack.Springboot1.repo.CustomerRepository;
+import com.pack.Springboot1.repo.ProductRepository;
+
+@Configuration
+@SpringBootApplication
+public class Springboot1Application implements CommandLineRunner {
+	@Autowired
+	ProductRepository prodrepo;
+	@Autowired
+	CustomerRepository custrepo;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Springboot1Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		insertProduct();
+}
+
+	private void insertProduct() {
+		List<Product> l=new ArrayList<>();
+		Product p1=new Product(101L,"ToyCar","Baby",860.00d);
+		l.add(p1);
+		Product p2=new Product(102L,"java","Books",90.00d);
+		l.add(p2);
+		Product p3=new Product(103L,"spring","Books",120.00d);
+		l.add(p3);
+		Product p4=new Product(104L,"ToyBike","Toys",75.00d);
+		l.add(p4);
+		Product p5=new Product(107L,"Aeroplane","Toys",960.00d);
+		l.add(p5);
+		Product p6=new Product(106L,"toyMikey","baby",99.00d);
+		prodrepo.save(p6);
+		prodrepo.saveAll(l);
+		Customer c1=new Customer(1001,"komal",1);
+		Customer c2=new Customer(1002,"saran",2);
+		Customer c3=new Customer(1003,"varun",3);
+		List<Customer> c=new ArrayList<>();
+		c.add(c1);
+		c.add(c2);
+		c.add(c3);
+		custrepo.saveAll(c);
+		}
+		
+	}

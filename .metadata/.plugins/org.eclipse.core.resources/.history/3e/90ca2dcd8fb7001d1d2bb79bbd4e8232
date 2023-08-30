@@ -1,0 +1,21 @@
+package com.pack.Springbootmvc.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.pack.Springbootmvc.StudentProps;
+
+@RestController
+public class ProfileController {
+
+	@Autowired
+	StudentProps stuProp;
+	
+	@GetMapping("/student")
+	public String getStudentInfo() {
+		return stuProp.getName()+" "+stuProp.getAge()+" "+stuProp.getLocation()+" "+stuProp.getEmail()+stuProp.getCourse();
+	}
+	
+	
+}

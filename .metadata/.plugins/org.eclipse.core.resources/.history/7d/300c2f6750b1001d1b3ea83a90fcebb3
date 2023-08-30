@@ -1,0 +1,42 @@
+package com.pack.Service;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.pack.model.Employee;
+	//this class will acts like bean prg
+
+	@Service
+
+	@Transactional
+
+	public class EmployeeServiceImpl implements EmployeeService{
+
+	             
+
+	              @Autowired
+
+	              EmployeeRepo employeeRepo;
+
+	 
+
+	              @Override
+
+	              public void saveEmployee(Employee e) {
+
+	                             employeeRepo.saveEmployee(e);
+
+	              }
+
+
+
+				@Override
+				public void saveEmployee(Employee e) {
+					// TODO Auto-generated method stub
+					
+				}
+
+	 
+
+	}
+

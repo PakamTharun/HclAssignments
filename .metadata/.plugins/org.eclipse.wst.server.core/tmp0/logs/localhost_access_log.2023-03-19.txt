@@ -1,0 +1,5 @@
+127.0.0.1 - - [19/Mar/2023:14:50:09 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:50:10 +0530] "GET /PetPeer/WEB-INF/classes/com/pack/PetPeer/PetPeerApplication.java HTTP/1.1" 404 682
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:50:10 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+127.0.0.1 - - [19/Mar/2023:14:51:12 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [19/Mar/2023:14:51:12 +0530] "GET /PetPeer/WEB-INF/classes/com/pack/PetPeer/PetPeerApplication.java HTTP/1.1" 404 682

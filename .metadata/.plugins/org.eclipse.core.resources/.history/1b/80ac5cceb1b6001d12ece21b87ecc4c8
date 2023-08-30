@@ -1,0 +1,6 @@
+server.port=1002
+server.servlet.context-path=/employee
+spring.mvc.view.prefix=/WEB-INF/views/
+spring.mvc.view.suffix=index.jsp
+#prefix+viewname+suffix=/WEB-INF/views/index.jsp
+

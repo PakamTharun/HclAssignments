@@ -1,0 +1,118 @@
+package com.pack.Springboot1;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Optional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+
+import com.pack.Springboot1.entity.Customer;
+import com.pack.Springboot1.entity.Product;
+import com.pack.Springboot1.repo.CustomerRepository;
+import com.pack.Springboot1.repo.ProductRepository;
+
+@Configuration
+@SpringBootApplication
+public class Springboot1Application implements CommandLineRunner {
+	@Autowired
+	ProductRepository prodrepo;
+	@Autowired
+	CustomerRepository custrepo;
+
+	public static void main(String[] args) {
+		SpringApplication.run(Springboot1Application.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+		//insertProduct();
+		//limitingProducts();
+		//cheapestBook("Books");
+		//fetchToys();
+		//StatisticalFigures();
+	}
+
+	/*private void StatisticalFigures() {
+		List<Product> l = prodrepo.fetchAllToys("Toys");
+		Product p = new Product();
+		l.forEach(System.out::println);
+		List<Double> l1 = new ArrayList<>();
+		Double sum = 0.0;
+		for (int i = 0; i < l.size(); i++) {
+			p = l.get(i);
+			l1.add(p.getPrice());
+			sum += p.getPrice();
+		}
+		Double max = Collections.max(l1);
+		Double min = Collections.min(l1);
+		int count = l1.size();
+		Double Average = sum / count;
+		System.out.println("sum = " + sum);
+		System.out.println("Average = " + Average);
+		System.out.println("max = " + max);
+		System.out.println("min = " + min);
+		System.out.println("Count = " + count);
+	}
+
+private void fetchToys() {
+List<Product> l = prodrepo.fetchAllToys("Toys");
+Product p = new Product();
+// l.forEach(System.out::println);
+for (int i = 0; i < l.size(); i++) {
+p = l.get(i);
+System.out.println(p.getId() + " " + p.getName() + " " + p.getCategory() + " " + p.getPrice() * 0.9);
+}
+}*/
+
+	/*private void cheapestBook(String category) {
+		Product p = prodrepo.findTopByCategoryOrderByPrice(category);
+		System.out.println("Cheapest" + p);
+	}
+
+	private void limitingProducts() {
+		List<Product> l = prodrepo.fetchAllProducts("Books", 100.00);
+		l.forEach(System.out::println);
+	}*/
+
+	/*private List<Product> fetchProduct(int i) {
+		Optional opt = prodrepo.findById(i);
+		Product p = (Product) opt.get();
+		List<Product> l = (List<Product>) new Product(p.getId(), p.getName(), p.getCategory(), p.getPrice());
+		return l;
+	}*/
+
+	/*private void insertProduct() {
+		Product p6 = new Product(106, "toyMikey", "baby", 99.00);
+		prodrepo.save(p6);
+		List<Product> l = new ArrayList<>();
+		Product p1 = new Product(101, "ToyCar", "Baby", 860.00);
+		l.add(p1);
+		Product p2 = new Product(102, "java", "Books", 90.00);
+		l.add(p2);
+		Product p3 = new Product(103, "spring", "Books", 120.00);
+		l.add(p3);
+		Product p4 = new Product(104, "ToyBike", "Toys", 75.00);
+		l.add(p4);
+		Product p5 = new Product(107, "Aeroplane", "Toys", 960.00);
+		l.add(p5);
+		prodrepo.saveAll(l);
+		Customer c1 = new Customer(1001, "komal", 1);
+		Customer c2 = new Customer(1002, "saran", 2);
+		Customer c3 = new Customer(1003, "varun", 3);
+		List<Customer> c = new ArrayList<>();
+		c.add(c1);
+		c.add(c2);
+		c.add(c3);
+		custrepo.saveAll(c);
+	}*/
+}

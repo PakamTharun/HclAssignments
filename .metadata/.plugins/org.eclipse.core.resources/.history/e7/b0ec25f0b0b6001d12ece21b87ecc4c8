@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Employee Details</title>
+</head>
+<body>
+ <h1>Employee Details</h1>
+    <%-- Define some sample employee data --%>
+    <% String name = "John Smith";
+       int age = 35;
+       double salary = 50000.00;
+    %>
+    <%-- Output the employee details --%>
+    <p>Name: <%= name %></p>
+    <p>Age: <%= age %></p>
+    <p>Salary: $<%= salary %></p>
+</body>
+</html>

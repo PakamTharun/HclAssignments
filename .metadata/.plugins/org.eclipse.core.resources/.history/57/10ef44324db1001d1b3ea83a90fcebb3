@@ -1,0 +1,5 @@
+package com.pack.Service;
+import com.pack.modelEmployee;
+public interface EmployeeService {
+	 public void saveEmployee(Employee e);
+}

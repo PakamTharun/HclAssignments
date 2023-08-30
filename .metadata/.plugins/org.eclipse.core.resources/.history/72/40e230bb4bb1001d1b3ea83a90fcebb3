@@ -1,0 +1,7 @@
+public interface EmployeeRepo {
+
+     public void saveEmployee(Employee e);
+
+}
+
+ 
